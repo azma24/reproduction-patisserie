@@ -1,4 +1,7 @@
-# 模写コーディング
+# Reproduction Patisserie
+
+## Webサイト
+https://azma24.github.io/reproduction-patisserie/
 
 ## 概要
 実在するお菓子屋さんのWebサイトを参考に制作した模写コーディングです。
