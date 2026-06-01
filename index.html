@@ -13,6 +13,8 @@
     />
   </head>
 
+  <button class="to-top" aria-label="ページ上部へ戻る">↑</button>
+
   <body>
     <header>
       <div class="header-inner">
@@ -26,12 +28,31 @@
             <li><a href="#store-info">店舗紹介</a></li>
           </ul>
         </nav>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="メニューを開閉"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+        </button>
       </div>
+
+      <nav class="sp-nav" id="sp-nav">
+        <a href="#products">商品紹介</a>
+        <a href="#store-info">店舗紹介</a>
+        <a href="#about">お店の歴史</a>
+        <a href="#">オンラインショップ</a>
+      </nav>
     </header>
 
     <main>
       <section class="hero">
-        <a href="#"><img src="img/hero.jpg" alt="ファーストビュー" /></a>
+        <a href="#"
+          ><img src="img/hero.jpg" class="fv-img" alt="ファーストビュー"
+        /></a>
       </section>
 
       <section id="products">
@@ -47,7 +68,7 @@
                 <a class="page-btn" href="#">詳しくみる</a>
               </div>
             </div>
-            <div class="products-first-img">
+            <div class="products-first-img img-fade">
               <a href="#">
                 <img src="img/jamsandcookie1.jpg" alt="ジャムサンドクッキー" />
               </a>
@@ -57,7 +78,7 @@
           <div class="products-contents">
             <div class="products-item">
               <a href="#">
-                <div class="products-img">
+                <div class="products-img img-fade">
                   <img src="img/chococookie.jpg" alt="ガトークッキー" />
                   <div class="card-overlay">
                     <button class="card-button" type="button">
@@ -72,7 +93,7 @@
 
             <div class="products-item">
               <a href="#">
-                <div class="products-img">
+                <div class="products-img img-fade">
                   <img
                     src="img/frorantan.jpg"
                     alt="アーモンドフロランタンの写真"
@@ -90,7 +111,7 @@
 
             <div class="products-item">
               <a href="#">
-                <div class="products-img">
+                <div class="products-img img-fade">
                   <img src="img/macaron.jpg" alt="マカロンの写真" />
                   <div class="card-overlay">
                     <button class="card-button" type="button">
@@ -105,7 +126,7 @@
 
             <div class="products-item">
               <a href="#">
-                <div class="products-img">
+                <div class="products-img img-fade">
                   <img
                     src="img/lemonmerenge.jpg"
                     alt="レモンメレンゲタルトの写真"
@@ -123,7 +144,7 @@
 
             <div class="products-item">
               <a href="#">
-                <div class="products-img">
+                <div class="products-img img-fade">
                   <img
                     src="img/taltcake.jpg"
                     alt="ストロベリータルトレットの写真"
@@ -141,7 +162,7 @@
 
             <div class="products-item">
               <a href="#">
-                <div class="products-img">
+                <div class="products-img img-fade">
                   <img src="img/chocolate.jpg" alt="ボンボンショコラの写真" />
                   <div class="card-overlay">
                     <button class="card-button" type="button">
@@ -161,7 +182,7 @@
         <div class="inner">
           <h2>店舗紹介</h2>
           <div class="store-info-card">
-            <div class="store-info-img">
+            <div class="store-info-img img-fade">
               <img src="img/accessdaikanyama.jpg" alt="" />
             </div>
             <div class="store-info-txt">
@@ -183,8 +204,6 @@
                 </dd>
                 <dt>定休日</dt>
                 <dd>水曜日・金曜日</dd>
-                <dt>駐車場</dt>
-                <dd>あり（5台）</dd>
                 <dt>支払方法</dt>
                 <dd>現金 / VISA / Mastercard / JCB / PayPay</dd>
               </dl>
@@ -199,7 +218,7 @@
           <div class="info-contents">
             <div class="info-card">
               <a href="#">
-                <div class="info-img">
+                <div class="info-img img-fade">
                   <img src="img/accessdaikanyama.jpg" alt="代官山本店の写真" />
                 </div>
                 <p class="info-date">2026.03.01</p>
@@ -208,7 +227,7 @@
             </div>
             <div class="info-card">
               <a href="#">
-                <div class="info-img">
+                <div class="info-img img-fade">
                   <img
                     src="img/frorantan.jpg"
                     alt="アーモンドフロランタンの写真"
@@ -223,7 +242,7 @@
             </div>
             <div class="info-card">
               <a href="#">
-                <div class="info-img">
+                <div class="info-img img-fade">
                   <img src="img/chococookie.jpg" alt="ガトークッキーの写真" />
                 </div>
                 <p class="info-date">2026.01.07</p>
@@ -232,7 +251,7 @@
             </div>
             <div class="info-card">
               <a href="#">
-                <div class="info-img">
+                <div class="info-img img-fade">
                   <img src="img/shop-history.jpg" alt="創業当初の写真" />
                 </div>
                 <p class="info-date">2025.11.01</p>
@@ -249,21 +268,23 @@
         </div>
       </section>
 
-      <section class="about">
+      <section id="about">
         <div class="inner">
           <div class="about-contents">
+            <div class="about-contents-img img-fade">
+              <img src="img/shop-history.jpg" alt="" />
+            </div>
             <div class="about-contents-txt">
               <h2>pâtisserie Ichijo</h2>
-              <h3>焼きたての香りと、昔から変わらない味。</h3>
+              <h3>
+                焼きたての香りと、<br class="sp-only" />昔から変わらない味。
+              </h3>
               <p>
                 昭和31年、東京の片隅で祖母がひとり焼き始めたクッキーが、この店の始まりです。型も製法も変えぬまま、三代にわたって受け継いできた理由はただひとつ。あの頃のおいしさを、そのまま届けたいから。
               </p>
               <p>
                 素材は変わっても、火加減と時間だけは機械に任せたことがありません。焦らず、省かず、丁寧に。それが私たちにとって、お客様への誠実さの示し方です。
               </p>
-            </div>
-            <div class="about-contents-img">
-              <img src="img/shop-history.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -290,24 +311,27 @@
                 <li><a href="#">採用情報</a></li>
               </ul>
             </div>
-            <div class="footer-sns">
-              <a href="#">
-                <i class="fa-brands fa-square-facebook"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-square-instagram"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-line"></i>
-              </a>
-            </div>
           </div>
-          <div class="footer-snsicon"></div>
+          <div class="footer-sns">
+            <a href="#">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-line"></i>
+            </a>
+          </div>
         </div>
+        <div class="footer-snsicon"></div>
+
         <p class="footer-copy">
           &copy; 2026 pâtisserie Ichijo. All Rights Reserved.
         </p>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
